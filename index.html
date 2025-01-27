@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintPro - Zamość</title>
+
+</head>
+
+<body>
+    
+    
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-height: 100px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #bd1547;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 100px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #003366;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #003366;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .instagram {
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
+        .instagram img {
+            max-width: 800;
+            border-radius: 20px;
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+           <h2>PrintPro</h2>
+          </div>
+        <h1>PrintPro - Profesjonalne Usługi Drukarskie w Zamościu</h1>
+    </header>
+    <div class="login-container">
+        <h2 class="login-header">Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-button">Log In</button>
+            <p class="error-message" id="errorMessage" style="display: none;">Invalid username or password.</p>
+        </form>
+    </div>
+    
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        .login-header {
+            color: #bd1547;
+            margin-bottom: 20px;
+        }
+    
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        .login-button:hover {
+            background-color: #005599;
+        }
+    
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+    
+            // Simple validation (you can replace this with your logic)
+            if (username === 'admin' && password === 'password') {
+                alert('Login successful!');
+                errorMessage.style.display = 'none';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+    
+
+    <div class="container">
+        <center><h2>O nas</h2></center>
+        <p>Firma PrintPro oferuje szeroki zakres usług drukarskich, w tym drukowanie, kopiowanie oraz projektowanie materiałów reklamowych. Siedziba firmy znajduje się w Zamościu.</p>
+
+        <center><h2>Cennik usług</h2></center>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Materiał</th>
+                    <th>Nakład</th>
+                    <th>Cena A4 (PLN)</th>
+                    <th>Cena A3 (PLN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 Kolor </td>
+                    <td>Papier biały 80g</td>
+                    <td>1-49</td>
+                    <td>1.1zł</td>
+                    <td>2,2zł</td>
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 Kolor </td>
+                    <td>Papier biały 80g</td>
+                    <td>50-99</td>
+                    <td>2.26zł</td>
+                    <td>4,40zł</td>
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 Kolor</td>
+                    <td>Papier biały 80g</td>
+                    <td>100-999</td>
+                    <td>1,93zł</td>
+                    <td>3,63zł</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Materiał</th>
+                    <th>Nakład</th>
+                    <th>Cena A4 (PLN)</th>
+                    <th>Cena A3 (PLN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 </td>
+                    <td>Papier biały 80g</td>
+                    <td>1-49</td>
+                    <td>1,1zł</td>
+                    <td>2,2zł</td>
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 </td>
+                    <td>Papier biały 80g</td>
+                    <td>50-99</td>
+                    <td>0.55zł</td>
+                    <td>0.78zł</td>
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3 </td>
+                    <td>Papier biały 80g</td>
+                    <td>100-999</td>
+                    <td>0.24zł</td>
+                    <td>0.48zł</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Rozmiar</th>
+                    <th>Cena A4 (PLN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>30x40cm</td>
+                    <td>74zł</td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>40x50cm</td>
+                    <td>103zł</td>
+                   
+                   
+                </tr>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>50x70cm</td>
+                    <td>141zł</td>
+                   
+                   
+                </tr>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>60x100cm</td>
+                    <td>200zł</td>
+                   
+                   
+                </tr>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>100x140cm</td>
+                    <td>326zł</td>
+                   
+                   
+                </tr>
+                <tr>
+                    <td>Fotoobraz</td>
+                    <td>140x140cm</td>
+                    <td>411zł</td>
+                   
+                   
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Format</th>
+                    <th>Cena (PLN)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kalendarz</td>
+                    <td>A4</td>
+                    <td>49zł</td>
+
+
+                </tr>
+                <tr>
+                    <td>Kalendarz</td>
+                    <td>A3</td>
+                    <td>74zł</td>
+
+
+                </tr>
+                <tr>
+                    <td>Kalendarz</td>
+                    <td>30x14cm</td>
+                    <td>37zł</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Format</th>
+                    <th>do 49</th>
+                    <th>powyżej 49</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laminowanie</td>
+                    <td>A3</td>
+                    <td>6,47zł</td>
+                    <td>5,20zł</td>
+
+                </tr>
+                <tr>
+                    <td>Laminowanie</td>
+                    <td>A4</td>
+                    <td>3,40zł</td>
+                    <td>3zł</td>
+
+                </tr>
+                <tr>
+                    <td>Laminowanie</td>
+                    <td>A5</td>
+                    <td>2,60zł</td>
+                    <td>2,20zł</td>
+
+                </tr>
+                <tr>
+                    <td>Laminowanie</td>
+                    <td>A6</td>
+                    <td>2zł</td>
+                    <td>1,7zł</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Materiał</th>
+                    <th>Cena (PLN)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plakaty A3</td>
+                    <td>Foto mat 180</td>
+
+                    <td>14zł</td>
+
+                </tr>
+                <tr>
+                    <td>Plakaty A3</td>
+                    <td>Foro połysk 190</td>
+
+                    <td>16zł</td>
+
+                </tr>
+                <tr>
+                    <td>Plakaty A3</td>
+                    <td>Kreda satyna 135</td>
+                    <td>14zł</td>
+
+                </tr>
+                
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+
+                    <th>Nakład</th>
+                    <th>DL (PLN)</th>
+                    <th>A6 (PLN)</th>
+                    <th>A5 (PLN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3</td>
+                    <td>500szt</td>
+                    <td>342zł</td>
+                    <td>505zł</td>
+                    <td>828zł</td>
+
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3</td>
+                    <td>1000szt</td>
+                    <td>270zł</td>
+                    <td>398zł</td>
+                    <td>660zł</td>
+
+                </tr>
+                <tr>
+                    <td>Drukowanie / Kopiowanie A4-A3</td>
+                    <td>2000szt</td>
+                    <td>828z</td>
+                    <td>660zł</td>
+                    <td>1160zł</td>
+
+                </tr>
+            </tbody>
+        </table>
+       <center><h2>Instagram<Instagram</h2></center>
+        <div class="instagram">
+                <img src="instagram.png.png" alt="Instagram PrintPro" class="instagram">
+
+              </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 PrintPro. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
+
